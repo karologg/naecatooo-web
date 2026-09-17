@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/bling-tile.png);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    font-family: 'Patrick Hand', monospace;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin: 5vw 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout-container {
+    display: flex;
+    gap: 4vw;
+    max-width: clamp(800px, 80%, 40rem);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 10vw;
+}
+
+.nav-btn {
+    background-color: #ffd9f8;
+    border: none;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    font-family: 'Patrick Hand', monospace;
+    width: clamp(3rem, 3rem + 1vw, 6rem);
+}
