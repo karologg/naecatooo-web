@@ -1,15 +1,18 @@
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     background-image: url(../img/bling-tile.png);
     background-repeat: repeat;
     background-size: 300px 300px;
     font-family: 'Patrick Hand', monospace;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .content {
+    width: min(100%, 1100px);
     margin: 5vw 10vw;
     display: flex;
     justify-content: center;
@@ -17,23 +20,86 @@ body {
 }
 
 .layout-container {
-    display: flex;
-    gap: 4vw;
-    max-width: clamp(800px, 80%, 40rem);
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    width: min(100%, 960px);
 }
 
 .sidebar {
     display: flex;
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
     flex-direction: column;
-    gap: 1vw;
-    width: 10vw;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 .nav-btn {
-    background-color: #ffd9f8;
+    background-color: var(--pri-color);
+    color: var(--ter-color);
     border: none;
-    border-radius: 1vw;
-    padding: 0.5vw;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
     font-family: 'Patrick Hand', monospace;
-    width: clamp(3rem, 3rem + 1vw, 6rem);
+    font-size: var(--fs-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.nav-btn:hover {
+    background-color: var(--ter-color);
+    color: var(--pri-color);
+    transition: background-color 0.5s, color 0.3s;
+    cursor: pointer;
+}
+
+.mini-banner {
+    background-color: var(--ter-color);
+    color: var(--pri-color);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    font-size: var(--fs-text);
+}
+
+.banner {
+    grid-column: 2 / 6;
+    grid-row: 1 / 2;
+    min-height: 180px;
+    background-color: var(--ter-color);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pri-color);
+    font-size: var(--fs-title);
+}
+
+main {
+    grid-column: 2 / 6;
+    grid-row: 2 / 5;
+    background-color: var(--pri-color);
+    color: var(--ter-color);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    min-height: 22rem;
+    box-sizing: border-box;
+}
+
+.main-content h1,
+.main-content p {
+    margin: 0 0 1rem;
+}
+
+.main-content h1 {
+    font-size: var(--fs-title);
+}
+
+.main-content p {
+    font-size: var(--fs-text);
+    line-height: 1.6;
 }
