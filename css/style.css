@@ -23,8 +23,10 @@ body {
     grid-template-columns: repeat(7, minmax(5rem, 0.25fr));
     grid-template-rows: repeat(6, minmax(3rem, 0.75fr));
     gap: 0.5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     width: clamp(300px, 80vw, 1000px);
+    padding: 1rem;
+    background-color: #251e2e;
 }
 
 
@@ -79,6 +81,8 @@ body {
     grid-column: 1/3;
     grid-row: 5/7;
     border-radius: 0.5rem;
+    border: none;
+    font-family: "Gaegu", monospace;
 }
 
 .banner {
@@ -92,6 +96,8 @@ body {
     color: var(--pri-color);
     font-size: var(--fs-title);
     border-radius: 0.5rem;
+    font-family: "Gaegu", monospace;
+    FONT-WEIGHT: BOLD;
 }
 
 main {
@@ -119,6 +125,7 @@ main {
     font-size: var(--fs-text);
     line-height: 1.6;
     font-family: "Balsamiq Sans", monospace;
+    hyphens: auto;
 }
 
 .main-content::-webkit-scrollbar {

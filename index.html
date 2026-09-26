@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +13,13 @@
 <body>
     <div class="content">
         <div class="layout-container">
-                <button class="nav-btn" id="home-btn">home</button>
-                <button class="nav-btn" id="characters-btn">original characters</button>
-                <button class="nav-btn" id="portfolio-btn">design portfolio</button>
-                <button class="nav-btn" id="collection-btn">collection</button>
-                <div class="mini-banner">banner</div>
-            <div class="banner">banner</div>
-            <main id="content-area" class="main-content">
-                <h1>naecatooo</h1>
-                <p>navegue por estes botões para me conhecer melhor!</p>
+                <button class="nav-btn" id="home-btn" onclick="navigate('home', event.currentTarget)">home</button>
+                <button class="nav-btn" id="characters-btn" onclick="navigate('ocs', event.currentTarget)">original characters</button>
+                <button class="nav-btn" id="portfolio-btn" onclick="navigate('portfolio', event.currentTarget)">design portfolio</button>
+                <button class="nav-btn" id="collection-btn" onclick="navigate('collection', event.currentTarget)">collection</button>
+                <button class="mini-banner">banner</button>
+            <div class="banner"></div>
+            <main id="content-area">
             </main>
         </div>
     </div>
